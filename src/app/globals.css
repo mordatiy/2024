@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.center {
+    text-align: center;
+}
+/*******************************************
+  HEADER
+*******************************************/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background: #143cdb;
+}
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 0 15px;
+    letter-spacing: 0.5px;
+}
+.nav-link:hover {
+    color:#ffc64d;
+}
+/*******************************************
+  end HEADER
+*******************************************/
+
+
+
+/*******************************************
+  PAGE
+*******************************************/
+.container {
+    padding: 25px 10%;
+}
+
+/*******************************************
+  end PAGE
+*******************************************/
+
+
+
+/*******************************************
+  TEAMS ROW
+*******************************************/
+.table {
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    margin: 20px 0;
+}
+
+.table-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 10px;
+}
+.table .table-row:last-child {
+    border-bottom: none;
+}
+
+.sort-flag {
+    font-size: 0.8em;
+    color: #aaa;
+    cursor: pointer;
+}
+.sort-flag.active {
+    color:#ffc64d;
+}
+
+
+.team-row .team-id {
+    width: 40px;
+}
+.team-row .team-flag {
+    width: 60px;
+}
+.team-row .team-flag img {
+    width: 30px;
+}
+.team-row .team-title {
+    width: 20%;
+}
+.team-row .team-title span {
+    /*text-transform: uppercase;*/
+    font-size: 1.25em;
+}
+/*******************************************
+  end TEAMS ROW
+*******************************************/
