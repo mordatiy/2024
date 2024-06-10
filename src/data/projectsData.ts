@@ -1,3 +1,4 @@
+export const imgPath = "https://raw.githubusercontent.com/mordatiy/euro2024/main/public/";
 
 export type SingleTeamType = {
     id: number

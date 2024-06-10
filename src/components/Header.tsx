@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 // import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from "next/link";
 import Image from 'next/image'
+import {imgPath} from "@/data/projectsData";
 
 
 
@@ -23,7 +24,7 @@ export default function Header() {
                   href={"/"}
                   className={"nav-link"}
             >
-                <img src="/logo-portrait.png" alt="" width={120}/>
+                <img src={imgPath+"logo-portrait.png"} alt="" width={120}/>
             </Link>
 
 

@@ -1,4 +1,4 @@
-import {TeamsListType} from "@/data/projectsData";
+import {imgPath, TeamsListType} from "@/data/projectsData";
 import React from "react";
 
 type PropsType = {
@@ -29,7 +29,7 @@ export function TeamsTable(props: PropsType) {
                         {item.id}
                     </div>
                     <div className={"team-flag"}>
-                        <img src={item.flag} alt="" className={"flag-small"}/>
+                        <img src={`${imgPath}${item.flag}`} alt="" className={"flag-small"}/>
                     </div>
                     <div className={"team-title"}>
                         <span>{item.title}</span>
