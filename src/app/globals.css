@@ -97,6 +97,20 @@ header {
     /*text-transform: uppercase;*/
     font-size: 1.25em;
 }
+
+.team-row .team-ranking {
+    width: 60px;
+    text-align: center;
+}
+
+.team-row .team-group {
+    width: 60px;
+    text-align: center;
+}
+.team-row .team-points {
+    width: 60px;
+    text-align: center;
+}
 /*******************************************
   end TEAMS ROW
 *******************************************/
