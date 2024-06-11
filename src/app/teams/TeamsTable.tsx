@@ -1,8 +1,8 @@
-import {imgPath, TeamsListType} from "@/data/projectsData";
+import {imgPath, TeamsArrayType} from "@/data/projectsData";
 import React from "react";
 
 type PropsType = {
-    teamList: TeamsListType,
+    teamList: TeamsArrayType,
     sortTeamsTable(key: string): void
     keySortString: string
 }

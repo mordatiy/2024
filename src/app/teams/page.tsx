@@ -1,14 +1,14 @@
 "use client";
 import React, { useState } from 'react'
-import {SingleTeamObjectKeys, SingleTeamType, Teams, TeamsListType} from "@/data/projectsData";
+import {SingleTeamObjectKeys, SingleTeamType, TeamsArray, TeamsArrayType} from "@/data/projectsData";
 import Link from "next/link";
 import {TeamsTable} from "@/app/teams/TeamsTable";
 
 
 export default function TeamsPage() {
-    let teams: TeamsListType = Teams;
+    let teams: TeamsArrayType = TeamsArray;
 
-    let [teamLists, setTeamLists] = useState<TeamsListType>(teams);
+    let [teamLists, setTeamLists] = useState<TeamsArrayType>(teams);
     let [keySort, setKeySort] = useState(["rankingEurope", "ask"]);
 
     const sortTeamsTable = (keyString: SingleTeamObjectKeys): void => {

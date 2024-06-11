@@ -12,7 +12,9 @@ export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     const navigation = [
-        {name: 'Home', href: '/'},
+        // {name: 'Home', href: '/'},
+        {name: 'Groups', href: '/groups'},
+        {name: 'Matches', href: '/matches'},
         {name: 'Teams', href: '/teams'},
         {name: 'Matvii', href: '/matvii'},
         {name: 'Dima', href: '/dima'},
