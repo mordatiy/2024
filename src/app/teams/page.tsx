@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react'
-import {SingleTeamType, Teams, TeamsListType } from "@/data/projectsData";
+import {SingleTeamObjectKeys, SingleTeamType, Teams, TeamsListType} from "@/data/projectsData";
 import Link from "next/link";
 import {TeamsTable} from "@/app/teams/TeamsTable";
 
@@ -11,7 +11,19 @@ export default function TeamsPage() {
     let [teamLists, setTeamLists] = useState<TeamsListType>(teams);
     let [keySort, setKeySort] = useState(["rankingEurope", "ask"]);
 
-    const sortTeamsTable = (keyString: string): void => {
+    const sortTeamsTable = (keyString: SingleTeamObjectKeys): void => {
+        //let keyString = "rankingEurope";
+        // switch (string) {
+        //     case "rankingEurope":
+        //         keyString = "rankingEurope";
+        //         break;
+        //     case "title":
+        //         keyString = "rankingEurope";
+        //         break;
+        //
+        //     default:
+        //         keyString = "rankingEurope";
+        // }
         console.log("sortTeamsTable " + keyString);
         //const key = "title";
         // if (key === keySort[0]) {
@@ -32,7 +44,6 @@ export default function TeamsPage() {
         const sortedTeamLists = teamLists.sort((team1: SingleTeamType, team2: SingleTeamType) => {
             // team1[key] > team2[key] ? 1 : -1);
             let result = 1;
-
 
             if (keySort[1] === "ask") {
                 result = (team1[keyString] > team2[keyString]) ? 1 : -1;

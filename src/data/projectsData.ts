@@ -1,5 +1,8 @@
 export const imgPath = "https://raw.githubusercontent.com/mordatiy/euro2024/main/public/";
 
+
+export type SingleTeamObjectKeys = "id" | "title" | "flag" | "rankingEurope" | "rankingWorld" | "group" | "points";
+
 export type SingleTeamType = {
     id: string
     //id_string: string
