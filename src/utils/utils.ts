@@ -50,8 +50,8 @@ export function updateTeamsArrayGroupStats(): TeamsArrayType {
     let teams: TeamsArrayType = [
         ...TeamsArray
     ];
-    console.log("updateTeamsArrayGroupStats")
     // let teams: TeamsArrayType = TeamsArray;
+    // console.log("updateTeamsArrayGroupStats")
     let games: Array<SingleGame> = GroupGames;
 
     games.forEach((game: SingleGame) => {

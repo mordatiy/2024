@@ -27,6 +27,15 @@ h5 {
 .center {
     text-align: center;
 }
+
+.small {
+    font-size: 0.8em;
+    color: #aaa;
+}
+.smallest {
+    font-size: 0.6em;
+    color: #aaa;
+}
 /*******************************************
   HEADER
 *******************************************/
@@ -145,15 +154,34 @@ header {
 /*******************************************
   GROUPS
 *******************************************/
-.wrapGroupTablesDetails {}
-.wrapGroupTablesCollapsed {
+.wrapGroupTables {
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
 }
-.wrapGroupTablesCollapsed .wrapGroup {
+.wrapGroupTables .wrapGroup50 {
     width: calc(50% - 50px);
     margin: 25px;
+}
+.wrapGroupTables .wrapGroup100 {
+    width: calc(100% - 50px);
+    margin: 25px;
+}
+
+.table-group-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 0 20px;
+}
+.show-group-link {
+    font-size: 0.75em;
+    cursor: pointer;
+    font-style: italic;
+}
+.show-group-link:hover {
+    text-decoration: underline;
+    color: #ffc64d;
 }
 
 .table-group {
@@ -181,6 +209,24 @@ header {
 
 .table-group .team-row .team-title span {
     font-size: 1em;
+}
+
+.table-group-games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.group-games {
+    width: calc(33.33% - 20px);
+    margin: 20px 0;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+}
+.wrapGroupTables .wrapGroup50 .details-info,
+.wrapGroupTables .wrapGroup50 .table-group-games {
+    display: none;
 }
 /*******************************************
   end GROUPS

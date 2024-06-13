@@ -13,7 +13,7 @@ export type PropsTypeGroupsView = {
 }
 
 export default function Groups(props: PropsTypeGroupsView) {
-    const classWrapTable = (props.type === "collapsed") ? "wrapGroupTablesCollapsed" : "wrapGroupTablesDetails";
+    const classWrapTable = (props.type === "collapsed") ? "wrapGroupTables" : "wrapGroupTables";
     // console.log(props);
 
     // Test
