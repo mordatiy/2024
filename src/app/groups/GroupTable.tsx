@@ -28,6 +28,8 @@ export default function GroupTable(props: PropsTypeGroups) {
     // console.log(groupTeams)
     const sortedTeamsByGoals: TeamsArrayType = sortedTeamsArray(groupTeams, "desk", "goalsFor");
     const sortedTeamsByPoints: TeamsArrayType = sortedTeamsArray(sortedTeamsByGoals, "desk", "points");
+
+
     console.log(sortedTeamsByPoints);
     //let startNum = 1;
 

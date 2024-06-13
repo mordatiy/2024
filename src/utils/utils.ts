@@ -47,10 +47,11 @@ export function getTeamByID(id: TeamIDsType): Array<SingleTeamType> {
 // * * *
 // update Teams Stats Group
 export function updateTeamsArrayGroupStats(): TeamsArrayType {
-    // let teams: TeamsArrayType = [
-    //     ...TeamsArray
-    // ];
-    let teams: TeamsArrayType = TeamsArray;
+    let teams: TeamsArrayType = [
+        ...TeamsArray
+    ];
+    console.log("updateTeamsArrayGroupStats")
+    // let teams: TeamsArrayType = TeamsArray;
     let games: Array<SingleGame> = GroupGames;
 
     games.forEach((game: SingleGame) => {
@@ -59,7 +60,7 @@ export function updateTeamsArrayGroupStats(): TeamsArrayType {
         let team2: Array<SingleTeamType> = getTeamByID(game.team2);
 
         // goals:
-        team1[0].goalsFor += game.goals1;
+        team1[0].goalsFor += game.goals1 + 5;
         team1[0].goalsAgainst += game.goals2;
         team2[0].goalsFor += game.goals2;
         team2[0].goalsAgainst += game.goals1;

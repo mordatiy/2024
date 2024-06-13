@@ -9,7 +9,11 @@ export default function HomePage() {
 
     // * * *
     // get Teams and Points:
-    const teamsArray: TeamsArrayType = updateTeamsArrayGroupStats();
+    // const teamsArray: TeamsArrayType = updateTeamsArrayGroupStats();
+    const teamsArray: TeamsArrayType = [
+        ...updateTeamsArrayGroupStats()
+
+    ];
     // console.log(teamsArray);
     // end get Teams and Points:
     // * * *
