@@ -18,6 +18,11 @@ h2 {
     text-shadow: 1px 1px 2px #dedede;
 }
 
+h5 {
+    font-weight: bold;
+    opacity: 0.7;
+}
+
 
 .center {
     text-align: center;
@@ -77,7 +82,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: left;
+    justify-content: space-between;
     width: 100%;
     border-bottom: 1px solid #ddd;
     padding: 20px 10px;
@@ -100,10 +105,12 @@ header {
     width: 40px;
 }
 .team-row .team-flag {
-    width: 60px;
+    width: 50px;
+    text-align: center;
 }
 .team-row .team-flag img {
     width: 30px;
+    display: inline-block;
 }
 .team-row .team-title {
     width: 20%;
@@ -126,6 +133,10 @@ header {
     width: 60px;
     text-align: center;
 }
+.team-row .team-played {
+    width: 60px;
+    text-align: center;
+}
 /*******************************************
   end TEAMS ROW
 *******************************************/
@@ -143,6 +154,33 @@ header {
 .wrapGroupTablesCollapsed .wrapGroup {
     width: calc(50% - 50px);
     margin: 25px;
+}
+
+.table-group {
+    padding: 10px 20px;
+}
+.table-group .table-row {
+    padding: 0;
+    height: 50px;
+}
+.table-group .team-position  {
+    width: 25px;
+    text-align: center;
+    height: 100%;
+    border-right: 4px solid transparent;
+    display: flex;
+    align-items: center;
+}
+.table-group .team-position.pos_0,
+.table-group .team-position.pos_1{
+    border-right: 4px solid #31d331;
+}
+.table-group .team-position.pos_2{
+     border-right: 4px solid #ffeb3b;
+ }
+
+.table-group .team-row .team-title span {
+    font-size: 1em;
 }
 /*******************************************
   end GROUPS

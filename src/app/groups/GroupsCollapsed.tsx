@@ -4,7 +4,6 @@ import {PropsTypeGroupsView} from "@/app/groups/Groups";
 
 export default function GroupsCollapsed(props: PropsTypeGroupsView) {
     const classWrapTable = (props.type === "collapsed") ? "wrapGroupTablesCollapsed" : "wrapGroupTablesDetails";
-
     return (
         <>
             <div className={classWrapTable}>
