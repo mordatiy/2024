@@ -10,6 +10,7 @@ export default function HomePage() {
     // * * *
     // get Teams and Points:
     // const teamsArray: TeamsArrayType = updateTeamsArrayGroupStats();
+    console.log("HomePage");
     const teamsArray: TeamsArrayType = [
         ...updateTeamsArrayGroupStats()
 
