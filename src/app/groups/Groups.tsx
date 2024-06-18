@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
-import {SingleTeamType, TeamsArray, TeamsArrayType, TeamsListType} from "@/data/projectsData";
+// import dynamic from 'next/dynamic'
+import {TeamsArrayType} from "@/data/projectsData";
 import GroupTable from "@/app/groups/GroupTable";
 import {getTeamByID} from "@/utils/utils";
 
@@ -14,6 +16,9 @@ export type PropsTypeGroupsView = {
 
 export default function Groups(props: PropsTypeGroupsView) {
     const classWrapTable = (props.type === "collapsed") ? "wrapGroupTables" : "wrapGroupTables";
+    console.log("Groups Component");
+    // console.log(props.teamsArray);
+    console.log(props.teamsArray[8].id, props.teamsArray[8].gamesWon);
     // console.log(props);
 
     // Test
@@ -31,12 +36,12 @@ export default function Groups(props: PropsTypeGroupsView) {
         <>
             <div className={classWrapTable}>
                 {props.groupsArray.map((group) => (
-                    <GroupTable key={"group_" + group}
+                    <GroupTable key={"groupTable_" + group}
                         type={props.type}
                         groupsId={group}
                         teamsArray={props.teamsArray}
                     />
-                ))};
+                ))}
             </div>
         </>
     )

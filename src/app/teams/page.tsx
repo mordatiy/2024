@@ -3,73 +3,60 @@ import React, { useState } from 'react'
 import {SingleTeamObjectKeys, SingleTeamType, TeamsArray, TeamsArrayType} from "@/data/projectsData";
 import Link from "next/link";
 import {TeamsTable} from "@/app/teams/TeamsTable";
+import {sortedTeamsArray, sortTypeType, updateTeamsArrayGroupStats} from "@/utils/utils";
 
 
 export default function TeamsPage() {
-    let teams: TeamsArrayType = TeamsArray;
+    //let teams: TeamsArrayType = TeamsArray;
 
-    let [teamLists, setTeamLists] = useState<TeamsArrayType>(teams);
-    let [keySort, setKeySort] = useState(["rankingEurope", "ask"]);
+    // const teamsArrayWithStats: TeamsArrayType = [
+    //     ...updateTeamsArrayGroupStats()
+    // ];
+    const teamsArrayWithStats: TeamsArrayType = structuredClone(updateTeamsArrayGroupStats());
+
+    let [teamLists, setTeamLists] = useState<TeamsArrayType>(teamsArrayWithStats);
+
+    let [sortKey, setSortKey] = useState<SingleTeamObjectKeys>("rankingEurope");
+    let [sortType, setSortType] = useState<sortTypeType>("ask")
+
+    // console.log(teamLists[8].id, teamLists[8].gamesWon);
 
     const sortTeamsTable = (keyString: SingleTeamObjectKeys): void => {
-        //let keyString = "rankingEurope";
-        // switch (string) {
-        //     case "rankingEurope":
-        //         keyString = "rankingEurope";
-        //         break;
-        //     case "title":
-        //         keyString = "rankingEurope";
-        //         break;
-        //
-        //     default:
-        //         keyString = "rankingEurope";
-        // }
         console.log("sortTeamsTable " + keyString);
         //const key = "title";
         // if (key === keySort[0]) {
         //     alert("+++")
         // }
-        let keyType = keySort[1];
-        if (keyString === keySort[0]) {
-            // keySort[1] = ( keySort[1] === "ask") ? "desc" : "asc";
-            if ( keySort[1] === "ask" ) {
-                keyType = "desk"
+        //let keyType: sortTypeType = keySort[1];
+        if (keyString === sortKey) {
+            if ( sortType === "ask" ) {
+                setSortType("desk");
             } else {
-                keyType = "ask"
+                setSortType("ask");
             }
         } else {
-            keyType = "ask"
+            setSortType("ask");
         }
+        const sortedTeamsBySortKey: TeamsArrayType = sortedTeamsArray(teamLists, sortType, sortKey);
 
-        const sortedTeamLists = teamLists.sort((team1: SingleTeamType, team2: SingleTeamType) => {
-            // team1[key] > team2[key] ? 1 : -1);
-            let result = 1;
-
-            if (keySort[1] === "ask") {
-                result = (team1[keyString] > team2[keyString]) ? 1 : -1;
-            } else {
-                result = (team1[keyString] < team2[keyString]) ? 1 : -1;
-            }
-            return result;
-        });
-
-        setTeamLists([...sortedTeamLists]);
-        setKeySort([keyString, keyType]);
-        console.log(keySort)
+        setTeamLists([...sortedTeamsBySortKey]);
+        setSortKey(keyString)
+        console.log(sortKey)
         //setKeySort(key);
     }
 
 
+    //sortTeamsTable("rankingEurope");
     return (
         <>
             Teams Group stage:
             <p>
-                Viva {teams[11].title} !!
+                {/*Viva {teams[11].title} !!*/}
             </p>
             <TeamsTable
                 teamList={teamLists}
                 sortTeamsTable={sortTeamsTable}
-                keySortString={keySort[0]}
+                keySortString={sortKey}
             />
         </>
     )
