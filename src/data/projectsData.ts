@@ -2,6 +2,7 @@ import {GamesListType} from "@/data/projectsDataGames";
 
 export const imgPath = "https://raw.githubusercontent.com/mordatiy/euro2024/main/public/";
 
+export type GroupIDsType = "A" | "B" | "C" | "D" | "E" | "F";
 export type TeamIDsType = "fra" | "bel" | "eng" | "por" | "ned" | "esp" | "ita" | "cro" | "ger" | "sui" | "den" | "ukr" | "aut" | "hun" | "pol" | "srb" | "cze" | "sco" | "tur" | "rou" | "svk" | "svn" | "alb" | "geo";
 export type SingleTeamObjectKeys = "id" | "title" | "flag" | "rankingEurope" | "rankingWorld" | "group" |
     "points" | "goalsFor" | "goalsAgainst"| "goalsDiff" | "gamesWon" | "gamesDrawn" | "gamesLost";

@@ -1,23 +1,25 @@
 import React from "react";
 import {PropsTypeGroupsView} from "@/app/groups/Groups";
 import {TeamIDsType} from "@/data/projectsData";
-import {getGameByTeamsIDs} from "@/utils/utils";
+import {getGroupGameByTeamsIDs} from "@/utils/utils";
 
 type GroupTableGameResultPropsType = {
     team1: TeamIDsType
     team2: TeamIDsType
 }
 
+export const mS: Array<string> = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+
 export default function GroupTableGameResult(props: GroupTableGameResultPropsType) {
 
     //let resultHtml = "<div></div>";
-    const mS: Array<string> = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+    // const mS: Array<string> = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 
     let resultType = "pass";
     let result = "";
     let result2 = "";
     if (props.team1 !== props.team2) {
-        const groupGame = getGameByTeamsIDs(props.team1, props.team2);
+        const groupGame = getGroupGameByTeamsIDs(props.team1, props.team2);
         if (groupGame.length > 0) {
             //console.log(groupGame);
             const nowDate = new Date();

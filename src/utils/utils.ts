@@ -1,5 +1,5 @@
 import {SingleTeamObjectKeys, SingleTeamType, TeamIDsType, TeamsArray, TeamsArrayType} from "@/data/projectsData";
-import {GroupGames, SingleGame} from "@/data/projectsDataGames";
+import {AllGamesArray, SingleGame} from "@/data/projectsDataGames";
 import {id} from "postcss-selector-parser";
 
 export function sortSimplyArray(array: Array<any>, type: "ask" | "desk", key: string = "") {
@@ -47,8 +47,10 @@ export function getTeamByID(id: TeamIDsType): Array<SingleTeamType> {
 
 // * * *
 // get Game by Teams IDs
-export function getGameByTeamsIDs(team1Id: TeamIDsType, team2Id: TeamIDsType): Array<SingleGame> {
-    const gamesArray = GroupGames.filter((team) => ((team.team1 === team1Id && team.team2 === team2Id) || (team.team1 === team2Id && team.team2 === team1Id)))
+export function getGroupGameByTeamsIDs(team1Id: TeamIDsType, team2Id: TeamIDsType): Array<SingleGame> {
+    const gamesArray = AllGamesArray.filter((team) => (
+        (team.team1 === team1Id && team.team2 === team2Id) || (team.team1 === team2Id && team.team2 === team1Id)) && (team.type === "group")
+    )
     // return gamesArray[0];
     return structuredClone(gamesArray);
 }
@@ -67,7 +69,7 @@ export function updateTeamsArrayGroupStats(): TeamsArrayType {
 
     // let teams: TeamsArrayType = TeamsArray;
     console.log("update Teams Array Group Stats")
-    let games: Array<SingleGame> = GroupGames;
+    let games: Array<SingleGame> = AllGamesArray;
     const nowDate = new Date();
 
     games.forEach((game: SingleGame) => {

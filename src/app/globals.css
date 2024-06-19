@@ -17,6 +17,11 @@ h2 {
     font-weight: 600;
     text-shadow: 1px 1px 2px #dedede;
 }
+h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    opacity: 0.7;
+}
 
 h5 {
     font-weight: bold;
@@ -39,6 +44,10 @@ h5 {
 .smallest {
     font-size: 0.6em;
     color: #aaa;
+}
+
+.uppercase {
+    text-transform: uppercase;
 }
 /*******************************************
   HEADER
@@ -228,12 +237,11 @@ header {
     justify-content: space-between;
 }
 .group-games {
-    width: calc(33.33% - 20px);
-    margin: 20px 0;
-    padding: 20px;
+    width: calc(33.33% - 10px);
+    margin: 10px 0;
     text-align: center;
-    border-radius: 20px;
-    border: 1px solid #ddd;
+    /*border-radius: 20px;*/
+    /*border: 1px solid #ddd;*/
 }
 .wrapGroupTables .wrapGroup50 .details-info,
 .wrapGroupTables .wrapGroup50 .table-group-games {
@@ -241,4 +249,46 @@ header {
 }
 /*******************************************
   end GROUPS
+*******************************************/
+
+
+
+
+
+/*******************************************
+  GAMES/MATCHES
+*******************************************/
+.flag-small {
+    width: 30px;
+    height: 30px;
+}
+.flag-medium {
+    width: 50px;
+    height: 50px;
+}
+.game-brief-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    padding: 10px 0 5px;
+}
+
+.game-brief-container .team {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.game-brief-container .team .teamId {
+    margin-top: 5px;
+}
+
+.game-brief-container .center {
+    width: 30%;
+}
+/*******************************************
+  end GAMES/MATCHES
 *******************************************/

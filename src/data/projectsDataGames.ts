@@ -8,7 +8,7 @@ export type SingleTeamObjectKeys = "id" | "title" | "flag" | "rankingEurope" | "
 export type SingleGame = {
     id: string
     date: string // YYYY-MM-DD HH:MM
-    type: string // group | play-off
+    type: "group" | "play-off"
     team1: TeamIDsType
     team2: TeamIDsType
     goals1: number
@@ -18,23 +18,23 @@ export type SingleGame = {
 
 export type GamesListType = Array<SingleGame>;
 
-export const GroupGames: GamesListType = [
+export const AllGamesArray: GamesListType = [
     { team1: "ger", team2: "sco", goals1: 5, goals2: 1,
         date: "2024-06-14 22:00", id: "ger-sco", type: "group", done: true },
 
     { team1: "hun", team2: "sui", goals1: 1, goals2: 3,
-        date: "2024-06-15 16:00", id: "", type: "group", done: true },
+        date: "2024-06-15 16:00", id: "hun-sui", type: "group", done: true },
     { team1: "esp", team2: "cro", goals1: 3, goals2: 0,
-        date: "2024-06-15 19:00", id: "", type: "group", done: true },
+        date: "2024-06-15 19:00", id: "esp-cro", type: "group", done: true },
     { team1: "ita", team2: "alb", goals1: 2, goals2: 1,
-        date: "2024-06-15 22:00", id: "", type: "group", done: true },
+        date: "2024-06-15 22:00", id: "ita-alb", type: "group", done: true },
 
     { team1: "pol", team2: "ned", goals1: 1, goals2: 2,
-        date: "2024-06-16 16:00", id: "", type: "group", done: true },
+        date: "2024-06-16 16:00", id: "pol-ned", type: "group", done: true },
     { team1: "svn", team2: "den", goals1: 1, goals2: 1,
-        date: "2024-06-16 19:00", id: "", type: "group", done: true },
+        date: "2024-06-16 19:00", id: "svn-den", type: "group", done: true },
     { team1: "srb", team2: "eng", goals1: 0, goals2: 1,
-        date: "2024-06-16 22:00", id: "", type: "group", done: true },
+        date: "2024-06-16 22:00", id: "srb-eng", type: "group", done: true },
 
     { team1: "rou", team2: "ukr", goals1: 3, goals2: 0,
         date: "2024-06-17 16:00", id: "", type: "group", done: true },
@@ -43,9 +43,9 @@ export const GroupGames: GamesListType = [
     { team1: "aut", team2: "fra", goals1: 0, goals2: 1,
         date: "2024-06-17 22:00", id: "", type: "group", done: true },
 
-    { team1: "tur", team2: "geo", goals1: 0, goals2: 0,
+    { team1: "tur", team2: "geo", goals1: 3, goals2: 1,
         date: "2024-06-18 16:00", id: "", type: "group", done: false },
-    { team1: "por", team2: "cze", goals1: 0, goals2: 0,
+    { team1: "por", team2: "cze", goals1: 2, goals2: 1,
         date: "2024-06-18 19:00", id: "", type: "group", done: false },
 
     // * * *
