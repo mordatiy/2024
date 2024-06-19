@@ -44,9 +44,9 @@ export const AllGamesArray: GamesListType = [
         date: "2024-06-17 22:00", id: "", type: "group", done: true },
 
     { team1: "tur", team2: "geo", goals1: 3, goals2: 1,
-        date: "2024-06-18 16:00", id: "", type: "group", done: false },
+        date: "2024-06-18 16:00", id: "", type: "group", done: true },
     { team1: "por", team2: "cze", goals1: 2, goals2: 1,
-        date: "2024-06-18 19:00", id: "", type: "group", done: false },
+        date: "2024-06-18 19:00", id: "", type: "group", done: true },
 
     // * * *
     // round 2
