@@ -37,48 +37,48 @@ export const AllGamesArray: GamesListType = [
         date: "2024-06-16 22:00", id: "srb-eng", type: "group", done: true },
 
     { team1: "rou", team2: "ukr", goals1: 3, goals2: 0,
-        date: "2024-06-17 16:00", id: "", type: "group", done: true },
+        date: "2024-06-17 16:00", id: "rou-ukr", type: "group", done: true },
     { team1: "bel", team2: "svk", goals1: 0, goals2: 1,
-        date: "2024-06-17 19:00", id: "", type: "group", done: true },
+        date: "2024-06-17 19:00", id: "bel-svk", type: "group", done: true },
     { team1: "aut", team2: "fra", goals1: 0, goals2: 1,
-        date: "2024-06-17 22:00", id: "", type: "group", done: true },
+        date: "2024-06-17 22:00", id: "aut-fra", type: "group", done: true },
 
     { team1: "tur", team2: "geo", goals1: 3, goals2: 1,
-        date: "2024-06-18 16:00", id: "", type: "group", done: true },
+        date: "2024-06-18 16:00", id: "tur-geo", type: "group", done: true },
     { team1: "por", team2: "cze", goals1: 2, goals2: 1,
-        date: "2024-06-18 19:00", id: "", type: "group", done: true },
+        date: "2024-06-18 19:00", id: "por-cze", type: "group", done: true },
 
     // * * *
     // round 2
     // * * *
 
     { team1: "cro", team2: "alb", goals1: 0, goals2: 0,
-        date: "2024-06-19 16:00", id: "", type: "group", done: false },
+        date: "2024-06-19 16:00", id: "cro-alb", type: "group", done: false },
     { team1: "ger", team2: "hun", goals1: 0, goals2: 0,
-        date: "2024-06-19 19:00", id: "", type: "group", done: false },
+        date: "2024-06-19 19:00", id: "ger-hun", type: "group", done: false },
     { team1: "sco", team2: "sui", goals1: 0, goals2: 0,
-        date: "2024-06-19 22:00", id: "", type: "group", done: false },
+        date: "2024-06-19 22:00", id: "sco-sui", type: "group", done: false },
 
     { team1: "svn", team2: "srb", goals1: 0, goals2: 0,
-        date: "2024-06-20 16:00", id: "", type: "group", done: false },
+        date: "2024-06-20 16:00", id: "svn-srb", type: "group", done: false },
     { team1: "den", team2: "eng", goals1: 0, goals2: 0,
-        date: "2024-06-20 19:00", id: "", type: "group", done: false },
+        date: "2024-06-20 19:00", id: "den-eng", type: "group", done: false },
     { team1: "esp", team2: "ita", goals1: 0, goals2: 0,
-        date: "2024-06-20 22:00", id: "", type: "group", done: false },
+        date: "2024-06-20 22:00", id: "esp-ita", type: "group", done: false },
 
     { team1: "svk", team2: "ukr", goals1: 0, goals2: 0,
-        date: "2024-06-21 16:00", id: "", type: "group", done: false },
+        date: "2024-06-21 16:00", id: "svk-ukr", type: "group", done: false },
     { team1: "pol", team2: "aut", goals1: 0, goals2: 0,
-        date: "2024-06-21 19:00", id: "", type: "group", done: false },
+        date: "2024-06-21 19:00", id: "pol-aut", type: "group", done: false },
     { team1: "ned", team2: "fra", goals1: 0, goals2: 0,
-        date: "2024-06-21 22:00", id: "", type: "group", done: false },
+        date: "2024-06-21 22:00", id: "ned-fra", type: "group", done: false },
 
     { team1: "geo", team2: "cze", goals1: 0, goals2: 0,
-        date: "2024-06-22 16:00", id: "", type: "group", done: false },
+        date: "2024-06-22 16:00", id: "geo-cze", type: "group", done: false },
     { team1: "tur", team2: "por", goals1: 0, goals2: 0,
-        date: "2024-06-22 19:00", id: "", type: "group", done: false },
+        date: "2024-06-22 19:00", id: "tur-por", type: "group", done: false },
     { team1: "bel", team2: "rou", goals1: 0, goals2: 0,
-        date: "2024-06-22 22:00", id: "", type: "group", done: false },
+        date: "2024-06-22 22:00", id: "bel-rou", type: "group", done: false },
 
     // * * *
     // round 3

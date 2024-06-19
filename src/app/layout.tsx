@@ -6,6 +6,7 @@ import { Roboto } from "next/font/google";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 // const inter = Inter({ subsets: ["latin"] });
 const openSans = Open_Sans({ subsets: ["latin"] });
@@ -28,11 +29,12 @@ export default function RootLayout({
       <html lang="en">
         <body className={openSans.className}>
             <Header />
-            <div className={"container"}>
+            <div className={"container main-content"}>
                 {children}
             </div>
-
+            <Footer />
         </body>
+
       </html>
   );
 }
