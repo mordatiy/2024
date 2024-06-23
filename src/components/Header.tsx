@@ -16,8 +16,8 @@ export default function Header() {
         {name: 'Groups', href: '/groups'},
         {name: 'Matches', href: '/matches'},
         {name: 'Teams', href: '/teams'},
-        {name: 'Matvii', href: '/matvii'},
-        {name: 'Dima', href: '/dima'},
+        // {name: 'Matvii', href: '/matvii'},
+        {name: 'Bets', href: '/bets'},
     ]
 
     return (

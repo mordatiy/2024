@@ -13,7 +13,7 @@ type SingleGameBriefPropsType = {
 
 export default function SingleGameBrief(props: SingleGameBriefPropsType) {
     const currentGame: SingleGame = getGroupGameByTeamsIDs(props.team1Id, props.team2Id)[0];
-    console.log(currentGame);
+    // console.log(currentGame);
 
     const team1:SingleTeamType = getTeamByID(props.team1Id)[0];
     const team2:SingleTeamType = getTeamByID(props.team2Id)[0];
