@@ -34,21 +34,30 @@ export default function BetsPage() {
         let gamePointsD = 0;
         if (game.done && gameBetD) {
             if (game.goals1 === gameBetD?.goals1 && game.goals2 === gameBetD?.goals2) {
-                gamePointsD = 3
-            } else if (game.goals1 - game.goals2 === gameBetD?.goals1 - gameBetD?.goals2) {
-                gamePointsD = 1
-            } else {}
+                gamePointsD = 3;
+            } else if ((game.goals1 === game.goals2 && gameBetD?.goals1 === gameBetD?.goals2)
+                || (game.goals1 > game.goals2 && gameBetD?.goals1 > gameBetD?.goals2)
+                || (game.goals1 < game.goals2 && gameBetD?.goals1 < gameBetD?.goals2)) {
+                gamePointsD = 1;
+            } else {
+                gamePointsD = 0;
+            }
             pointsD += gamePointsD;
         }
 
-        let gameBetM = betsD.find((item) => (item.id === game.id && item.date === game.date));
+        let gameBetM = betsM.find((item) => (item.id === game.id && item.date === game.date));
         let gamePointsM = 0;
         if (game.done && gameBetM) {
             if (game.goals1 === gameBetM?.goals1 && game.goals2 === gameBetM?.goals2) {
-                gamePointsM = 3
-            } else if (game.goals1 - game.goals2 === gameBetM?.goals1 - gameBetM?.goals2) {
-                gamePointsM = 1
-            } else {}
+                gamePointsM = 3;
+                console.log(game)
+            } else if ((game.goals1 === game.goals2 && gameBetM?.goals1 === gameBetM?.goals2)
+                || (game.goals1 > game.goals2 && gameBetM?.goals1 > gameBetM?.goals2)
+                || (game.goals1 < game.goals2 && gameBetM?.goals1 < gameBetM?.goals2)) {
+                gamePointsM = 1;
+            } else {
+                gamePointsM = 0;
+            }
             pointsM += gamePointsM;
         }
         // console.log(game.goals1, game.goals2)

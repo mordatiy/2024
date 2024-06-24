@@ -89,10 +89,10 @@ export const AllGamesArray: GamesListType = [
     { team1: "sco", team2: "hun", goals1: 0, goals2: 1,
         date: "2024-06-23 22:00", id: "sco-hun", type: "group", done: true },
 
-    { team1: "alb", team2: "esp", goals1: 0, goals2: 0,
-        date: "2024-06-24 22:00", id: "alb-esp", type: "group", done: false },
-    { team1: "cro", team2: "ita", goals1: 0, goals2: 0,
-        date: "2024-06-24 22:00", id: "cro-ita", type: "group", done: false },
+    { team1: "alb", team2: "esp", goals1: 0, goals2: 1,
+        date: "2024-06-24 22:00", id: "alb-esp", type: "group", done: true },
+    { team1: "cro", team2: "ita", goals1: 1, goals2: 1,
+        date: "2024-06-24 22:00", id: "cro-ita", type: "group", done: true },
 
     { team1: "ned", team2: "aut", goals1: 0, goals2: 0,
         date: "2024-06-25 19:00", id: "ned-aut", type: "group", done: false },

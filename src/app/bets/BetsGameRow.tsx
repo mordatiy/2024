@@ -31,13 +31,19 @@ export default function BetsGameRow(props: BetsGameRowType) {
         if (props.game.goals1 === gameBetD?.goals1 && props.game.goals2 === gameBetD?.goals2) {
             gameBetDetailsD.pointsResult = 3;
             gameBetDetailsD.typeResult = "green"
-        } else if (props.game.goals1 - props.game.goals2 === gameBetD?.goals1 - gameBetD?.goals2) {
+        } else if ((props.game.goals1 === props.game.goals2 && gameBetD?.goals1 === gameBetD?.goals2)
+            || (props.game.goals1 > props.game.goals2 && gameBetD?.goals1 > gameBetD?.goals2)
+            || (props.game.goals1 < props.game.goals2 && gameBetD?.goals1 < gameBetD?.goals2)) {
             gameBetDetailsD.pointsResult = 1;
             gameBetDetailsD.typeResult = "grey"
         } else {
             gameBetDetailsD.typeResult = "red"
         }
     } else {}
+    // if (!props.game.done) {
+    //     // gameBetDetailsD.typeResult = "none"
+    //     gameBetDetailsD.pointsResult = 0;
+    // }
 
     // Matvii
     const gameBetM = betsM.find((item) => (item.id === props.game.id && item.date === props.game.date));
@@ -54,7 +60,9 @@ export default function BetsGameRow(props: BetsGameRowType) {
         if (props.game.goals1 === gameBetM?.goals1 && props.game.goals2 === gameBetM?.goals2) {
             gameBetDetailsM.pointsResult = 3;
             gameBetDetailsM.typeResult = "green"
-        } else if (props.game.goals1 - props.game.goals2 === gameBetM?.goals1 - gameBetM?.goals2) {
+        } else if ((props.game.goals1 === props.game.goals2 && gameBetM?.goals1 === gameBetM?.goals2)
+            || (props.game.goals1 > props.game.goals2 && gameBetM?.goals1 > gameBetM?.goals2)
+            || (props.game.goals1 < props.game.goals2 && gameBetM?.goals1 < gameBetM?.goals2)) {
             gameBetDetailsM.pointsResult = 1;
             gameBetDetailsM.typeResult = "grey"
         } else {
@@ -79,7 +87,7 @@ export default function BetsGameRow(props: BetsGameRowType) {
                     </div>
                     <div className={"bets-points"}>
                         <h1 className={"points"}>
-                            {gameBetDetailsD.pointsResult}
+                            {(props.game.done) ? gameBetDetailsD.pointsResult : ""}
                         </h1>
                     </div>
 
@@ -92,7 +100,8 @@ export default function BetsGameRow(props: BetsGameRowType) {
                 {gameBetDetailsM.typeResult !== "none" && <>
                     <div className={"bets-points"}>
                         <h1 className={"points"}>
-                            {gameBetDetailsM.pointsResult}
+                            {/*{gameBetDetailsM.pointsResult}*/}
+                            {(props.game.done) ? gameBetDetailsM.pointsResult : ""}
                         </h1>
                     </div>
                     <div className={"bets-body"}>
