@@ -20,7 +20,7 @@ export default function BetsMainRow(props: BetsMainRowType) {
                 </div>
             </div>
             <div className={"results"}>
-                <h1 className={"grey center"}> * * * - - - TOTAL - - - * * *  </h1>
+                <h1 className={"grey center"} style={{"display": "flex", "alignItems": "center", "justifyContent": "center"}}> TOTAL WIN </h1>
             </div>
             <div className={"bets matvii-bets"}>
                 <div className={"bets-points"}>

@@ -408,7 +408,7 @@ header {
 .dima-bets h1.total-points {
     box-shadow: 0 0 9px #aaaaaa, inset 1px 1px 23px #143cdb;
     border-radius: 50%;
-    padding: 7px 16px 7px 12px;
+    padding: 7px 14px 7px 12px;
     width: fit-content;
     position: relative;
     font-size: 2em;
@@ -416,7 +416,7 @@ header {
 .matvii-bets h1.total-points {
     box-shadow: 0 0 9px #aaaaaa, inset 1px 1px 23px #ffeb3b;
     border-radius: 50%;
-    padding: 7px 16px 7px 12px;
+    padding: 7px 13px 7px 13px;
     width: fit-content;
     position: relative;
     font-size: 2em;
