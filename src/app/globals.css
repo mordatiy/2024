@@ -33,6 +33,7 @@ h2 {
     font-weight: 600;
     text-shadow: 1px 1px 2px #dedede;
 }
+
 h3 {
     font-size: 1.2em;
     font-weight: 600;
@@ -327,6 +328,47 @@ header {
 .game-brief-container .center {
     width: 30%;
 }
+
+/*details*/
+.game-details-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: #143cdb;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    padding: 10px 0 5px;
+}
+
+.game-details-container .team {
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.game-details-container .team .teamTitle {
+    width: 65%;
+}
+.game-details-container h1 {
+     color: #ffffff;
+    text-shadow: 1px 1px 2px #FFEB3B;
+    letter-spacing: 0.04em;
+}
+.game-details-container .team .teamTitle h1 {
+    font-weight: 400;
+}
+.game-details-container .team .flag {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.game-details-container .center {
+    width: 20%;
+    padding: 0 0 5px 0;
+}
 /*******************************************
   end GAMES/MATCHES
 *******************************************/
@@ -345,6 +387,7 @@ header {
     display: flex;
     flex-direction: row;
     width: 100%;
+    border-bottom: 1px solid #ddd;
 }
 .bets-row-header {
     position: sticky;
@@ -361,12 +404,75 @@ header {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border:1px solid #aaaaaa;
+}
+.dima-bets h1.total-points {
+    box-shadow: 0 0 9px #aaaaaa, inset 1px 1px 23px #143cdb;
+    border-radius: 50%;
+    padding: 7px 16px 7px 12px;
+    width: fit-content;
+    position: relative;
+    font-size: 2em;
+}
+.matvii-bets h1.total-points {
+    box-shadow: 0 0 9px #aaaaaa, inset 1px 1px 23px #ffeb3b;
+    border-radius: 50%;
+    padding: 7px 16px 7px 12px;
+    width: fit-content;
+    position: relative;
+    font-size: 2em;
+}
+
+.player-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+}
+.player-info .flag-small {
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
 }
 
 .bets-row .bets .bets-body {
     width: 80%;
 }
+.bets-table-body .bets-body {
+    display: flex;
+    justify-content: center;
+}
+.border {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+.bets-body .border {
+    width: 60%;
+}
+.bets.red .border {
+    border-color: #ff0000;
+    background: #fff0f0;
+}
+.bets.red .bets-points h1 {
+    color: #ff0000;
+}
+.bets.green .border {
+    border-color: #31d331;
+    background: #cdffcd;
+}
+.bets.green .bets-points h1 {
+    color: #31d331;
+}
+.bets.grey .border {
+    border-color: #ddd;
+    background: #f3f3f3;
+}
+.bets.grey .bets-points h1 {
+    color: #000000;
+    opacity: 0.7;
+}
+
+
 .bets-row .bets .bets-points {
     width: 20%;
     text-align: center;
@@ -376,7 +482,6 @@ header {
     width: 60%;
     padding: 10px 10px;
     background: #ffffff;
-    border:1px solid #aaaaaa;
 }
 /*******************************************
   end BETS

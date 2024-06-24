@@ -16,15 +16,15 @@ export default function BetsMainRow(props: BetsMainRowType) {
                     <h1 className={"h1grad"}>Dima</h1>
                 </div>
                 <div className={"bets-points"}>
-                    <h1 className={"points"}>{props.pointsD}</h1>
+                    <h1 className={"points total-points"}>{props.pointsD}</h1>
                 </div>
             </div>
             <div className={"results"}>
-
+                <h1 className={"grey center"}> * * * - - - TOTAL - - - * * *  </h1>
             </div>
             <div className={"bets matvii-bets"}>
                 <div className={"bets-points"}>
-                    <h1 className={"points"}>{props.pointsM}</h1>
+                    <h1 className={"points total-points"}>{props.pointsM}</h1>
                 </div>
                 <div className={"bets-body"}>
                     <h1 className={"h2grad right"}>Matvii</h1>

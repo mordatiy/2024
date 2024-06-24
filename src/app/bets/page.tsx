@@ -13,23 +13,46 @@ export default function BetsPage() {
     const betsD:GamesListType = structuredClone(DimaBets);
     const betsM:GamesListType = structuredClone(MatviiBets);
 
-    let [pointsD, setPointsD] = useState(0);
-    let [pointsM, setPointsM] = useState(0);
-    console.log(betsD)
+    // let [pointsD, setPointsD] = useState(0);
+    // let [pointsM, setPointsM] = useState(0);
+    let pointsD = 0;
+    let pointsM = 0;
+    // console.log(betsD)
 
-    const updatePoints = (n: number, userId: string) => {
-        if (userId === "d") {
-            setPointsD(pointsD + n);
-            console.log("d", pointsD)
-        } else {
-            setPointsM(pointsM + n);
-        }
-    }
-    // updatePoints(2, "d");
+    // const updatePoints = (n: number, userId: string) => {
+    //     if (userId === "d") {
+    //         setPointsD(pointsD + n);
+    //         console.log("d", pointsD)
+    //     } else {
+    //         setPointsM(pointsM + n);
+    //     }
+    // }
+    // // updatePoints(2, "d");
 
     allGames.forEach(game => {
+        let gameBetD = betsD.find((item) => (item.id === game.id && item.date === game.date));
+        let gamePointsD = 0;
+        if (game.done && gameBetD) {
+            if (game.goals1 === gameBetD?.goals1 && game.goals2 === gameBetD?.goals2) {
+                gamePointsD = 3
+            } else if (game.goals1 - game.goals2 === gameBetD?.goals1 - gameBetD?.goals2) {
+                gamePointsD = 1
+            } else {}
+            pointsD += gamePointsD;
+        }
 
-
+        let gameBetM = betsD.find((item) => (item.id === game.id && item.date === game.date));
+        let gamePointsM = 0;
+        if (game.done && gameBetM) {
+            if (game.goals1 === gameBetM?.goals1 && game.goals2 === gameBetM?.goals2) {
+                gamePointsM = 3
+            } else if (game.goals1 - game.goals2 === gameBetM?.goals1 - gameBetM?.goals2) {
+                gamePointsM = 1
+            } else {}
+            pointsM += gamePointsM;
+        }
+        // console.log(game.goals1, game.goals2)
+        // console.log(gameBetD?.goals1, gameBetD?.goals2)
     })
 
 
@@ -50,7 +73,10 @@ export default function BetsPage() {
                     {
                         allGames.map((game: SingleGame) => {
                             return (
-                                <BetsGameRow game={game} updateData={updatePoints} key={`game__${game.id}` } />
+                                <BetsGameRow
+                                    game={game}
+                                    key={`game__${game.id}` }
+                                />
                             )
                         })
                     }
