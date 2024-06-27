@@ -98,15 +98,28 @@ export default function BetsGlobalRows() {
                         <span className={"small"}>BEST STRIKERS</span>
                     </div>
                     <h2 className={"player-info center"}>
-                        <img src={"https://raw.githubusercontent.com/mordatiy/euro2024/main/public//flags/GER.png"} alt=""
-                             title="Germany" className="flag-small"/>
-                        <span>Musiala - 2</span>
-                    </h2>
-                    <h2 className={"player-info center"}>
                         <img src={"https://raw.githubusercontent.com/mordatiy/euro2024/main/public//flags/GEO.png"}
                              alt=""
                              title="Germany" className="flag-small"/>
-                        <span>Mikautadze - 2</span>
+                        <span>Mikautadze - 3</span>
+                    </h2>
+                    <h2 className={"player-info center"}>
+                        <img src={"https://raw.githubusercontent.com/mordatiy/euro2024/main/public//flags/ROU.png"}
+                             alt=""
+                             title="Romania" className="flag-small"/>
+                        <span>R.Marin - 2</span>
+                    </h2>
+                    <h2 className={"player-info center"}>
+                        <img src={"https://raw.githubusercontent.com/mordatiy/euro2024/main/public//flags/NED.png"}
+                             alt=""
+                             title="Romania" className="flag-small"/>
+                        <span>Gakpo - 2</span>
+                    </h2>
+                    <h2 className={"player-info center"}>
+                        <img src={"https://raw.githubusercontent.com/mordatiy/euro2024/main/public//flags/GER.png"}
+                             alt=""
+                             title="Germany" className="flag-small"/>
+                        <span>Musiala - 2</span>
                     </h2>
                     <h2 className={"player-info center"}>
                         <img src={"https://raw.githubusercontent.com/mordatiy/euro2024/main/public//flags/SVK.png"}
